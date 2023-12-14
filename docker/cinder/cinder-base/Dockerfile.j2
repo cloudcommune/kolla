@@ -13,7 +13,8 @@ LABEL maintainer="{{ maintainer }}" name="{{ image_name }}" build-date="{{ build
                 'ceph-common',
                 'lvm2',
                 'cryptsetup',
-                'openstack-cinder'
+                'openstack-cinder',
+                'sysfsutils'
         ] %}
 
         {% if distro_python_version.startswith('3') %}
@@ -33,6 +34,7 @@ LABEL maintainer="{{ maintainer }}" name="{{ image_name }}" build-date="{{ build
                 'cinder-common',
                 'lvm2',
                 'cryptsetup',
+                'sysfsutils',
                 'python3-cephfs',
                 'python3-oslo.vmware',
                 'python3-rados',
